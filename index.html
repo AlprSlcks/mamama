@@ -1,0 +1,17 @@
+
+//Create the request 
+let requestURL = `https://api.github.com/repos/AlprSlcks/ResimYukleme`; 
+let requestOptions = { 
+    headers: { 
+        "Authorization": "token {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}" 
+    } 
+}; 
+
+// Fetch the Data 
+fetch(requestURL, requestOptions) 
+    .then(function(resp) {   
+        return resp.json(); 
+    }) 
+    .then(function(data) {  
+        console.log(JSON.stringify(data)); 
+    });
